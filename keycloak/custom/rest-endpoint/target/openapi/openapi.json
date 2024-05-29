@@ -1,0 +1,9 @@
+{
+  "openapi" : "3.0.3",
+  "info" : {
+    "title" : "Keycloak REST API Extension",
+    "description" : "This is a REST API reference for the Keycloak REST API extensions.",
+    "version" : "1.0"
+  },
+  "paths" : { }
+}

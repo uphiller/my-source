@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="dasniko.keycloak.resource.admin.MyAdminRealmResourceProviderTest" time="122.9" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="MS949"/>
+    <property name="java.class.path" value="C:\Users\youngho\IdeaProjects\keycloak-extensions-demo\rest-endpoint\target\test-classes;C:\Users\youngho\IdeaProjects\keycloak-extensions-demo\rest-endpoint\target\classes;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-core\24.0.0\keycloak-core-24.0.0.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-common\24.0.0\keycloak-common-24.0.0.jar;C:\Users\youngho\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.16.1\jackson-core-2.16.1.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.16.1\jackson-databind-2.16.1.jar;C:\Users\youngho\.m2\repository\org\eclipse\microprofile\openapi\microprofile-openapi-api\3.1.1\microprofile-openapi-api-3.1.1.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-server-spi\24.0.0\keycloak-server-spi-24.0.0.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-server-spi-private\24.0.0\keycloak-server-spi-private-24.0.0.jar;C:\Users\youngho\.m2\repository\org\apache\httpcomponents\httpclient\4.5.14\httpclient-4.5.14.jar;C:\Users\youngho\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\youngho\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\youngho\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-services\24.0.0\keycloak-services-24.0.0.jar;C:\Users\youngho\.m2\repository\jakarta\mail\jakarta.mail-api\2.1.1\jakarta.mail-api-2.1.1.jar;C:\Users\youngho\.m2\repository\org\eclipse\angus\angus-mail\2.0.1\angus-mail-2.0.1.jar;C:\Users\youngho\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\youngho\.m2\repository\org\twitter4j\twitter4j-core\4.1.2\twitter4j-core-4.1.2.jar;C:\Users\youngho\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\youngho\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.1.0\jakarta.ws.rs-api-3.1.0.jar;C:\Users\youngho\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\youngho\.m2\repository\jakarta\xml\soap\jakarta.xml.soap-api\3.0.0\jakarta.xml.soap-api-3.0.0.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-core-spi\6.2.7.Final\resteasy-core-spi-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\youngho\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.1\jakarta.xml.bind-api-3.0.1.jar;C:\Users\youngho\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\youngho\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\youngho\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20220608.1\owasp-java-html-sanitizer-20220608.1.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.16.1\jackson-annotations-2.16.1.jar;C:\Users\youngho\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.16.1\jackson-datatype-jdk8-2.16.1.jar;C:\Users\youngho\.m2\repository\com\google\zxing\javase\3.4.0\javase-3.4.0.jar;C:\Users\youngho\.m2\repository\com\google\zxing\core\3.4.0\core-3.4.0.jar;C:\Users\youngho\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.4.0\jai-imageio-core-1.4.0.jar;C:\Users\youngho\.m2\repository\com\webauthn4j\webauthn4j-core\0.21.5.RELEASE\webauthn4j-core-0.21.5.RELEASE.jar;C:\Users\youngho\.m2\repository\com\webauthn4j\webauthn4j-util\0.21.5.RELEASE\webauthn4j-util-0.21.5.RELEASE.jar;C:\Users\youngho\.m2\repository\org\apache\kerby\kerby-asn1\2.0.3\kerby-asn1-2.0.3.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-cbor\2.15.2\jackson-dataformat-cbor-2.15.2.jar;C:\Users\youngho\.m2\repository\org\checkerframework\checker-qual\3.36.0\checker-qual-3.36.0.jar;C:\Users\youngho\.m2\repository\com\github\ua-parser\uap-java\1.5.4\uap-java-1.5.4.jar;C:\Users\youngho\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\youngho\.m2\repository\io\smallrye\common\smallrye-common-annotation\2.1.2\smallrye-common-annotation-2.1.2.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-model-storage-private\24.0.0\keycloak-model-storage-private-24.0.0.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-model-storage\24.0.0\keycloak-model-storage-24.0.0.jar;C:\Users\youngho\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\youngho\.m2\repository\com\google\auto\service\auto-service\1.1.1\auto-service-1.1.1.jar;C:\Users\youngho\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\youngho\.m2\repository\com\google\auto\auto-common\1.2.1\auto-common-1.2.1.jar;C:\Users\youngho\.m2\repository\com\google\guava\guava\32.0.1-jre\guava-32.0.1-jre.jar;C:\Users\youngho\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\youngho\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\youngho\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\youngho\.m2\repository\com\google\errorprone\error_prone_annotations\2.18.0\error_prone_annotations-2.18.0.jar;C:\Users\youngho\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\youngho\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\youngho\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\youngho\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\youngho\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\youngho\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\youngho\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\youngho\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\youngho\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\youngho\.m2\repository\org\testcontainers\junit-jupiter\1.19.6\junit-jupiter-1.19.6.jar;C:\Users\youngho\.m2\repository\org\testcontainers\testcontainers\1.19.6\testcontainers-1.19.6.jar;C:\Users\youngho\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\youngho\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\youngho\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\youngho\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\youngho\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\youngho\.m2\repository\com\github\docker-java\docker-java-api\3.3.5\docker-java-api-3.3.5.jar;C:\Users\youngho\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.5\docker-java-transport-zerodep-3.3.5.jar;C:\Users\youngho\.m2\repository\com\github\docker-java\docker-java-transport\3.3.5\docker-java-transport-3.3.5.jar;C:\Users\youngho\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\youngho\.m2\repository\com\github\dasniko\testcontainers-keycloak\3.3.0\testcontainers-keycloak-3.3.0.jar;C:\Users\youngho\.m2\repository\io\quarkus\quarkus-junit4-mock\3.8.1\quarkus-junit4-mock-3.8.1.jar;C:\Users\youngho\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-api\1.2.6\shrinkwrap-api-1.2.6.jar;C:\Users\youngho\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-impl-base\1.2.6\shrinkwrap-impl-base-1.2.6.jar;C:\Users\youngho\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-spi\1.2.6\shrinkwrap-spi-1.2.6.jar;C:\Users\youngho\.m2\repository\org\slf4j\slf4j-api\2.0.6\slf4j-api-2.0.6.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-admin-client\24.0.0\keycloak-admin-client-24.0.0.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-client\6.2.7.Final\resteasy-client-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-client-api\6.2.7.Final\resteasy-client-api-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-core\6.2.7.Final\resteasy-core-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\org\jboss\jandex\2.4.4.Final\jandex-2.4.4.Final.jar;C:\Users\youngho\.m2\repository\com\ibm\async\asyncutil\0.1.0\asyncutil-0.1.0.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-multipart-provider\6.2.7.Final\resteasy-multipart-provider-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\org\apache\james\apache-mime4j-dom\0.8.9\apache-mime4j-dom-0.8.9.jar;C:\Users\youngho\.m2\repository\org\apache\james\apache-mime4j-core\0.8.9\apache-mime4j-core-0.8.9.jar;C:\Users\youngho\.m2\repository\org\apache\james\apache-mime4j-storage\0.8.9\apache-mime4j-storage-0.8.9.jar;C:\Users\youngho\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-jackson2-provider\6.2.7.Final\resteasy-jackson2-provider-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\jakarta\rs\jackson-jakarta-rs-base\2.15.3\jackson-jakarta-rs-base-2.15.3.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\jakarta\rs\jackson-jakarta-rs-json-provider\2.15.3\jackson-jakarta-rs-json-provider-2.15.3.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\module\jackson-module-jakarta-xmlbind-annotations\2.15.3\jackson-module-jakarta-xmlbind-annotations-2.15.3.jar;C:\Users\youngho\.m2\repository\com\github\java-json-tools\json-patch\1.13\json-patch-1.13.jar;C:\Users\youngho\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\youngho\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\youngho\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-jaxb-provider\6.2.7.Final\resteasy-jaxb-provider-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\codemodel\4.0.3\codemodel-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.3\jaxb-core-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\jaxb-jxc\4.0.3\jaxb-jxc-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.3\jaxb-runtime-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\txw2\4.0.3\txw2-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\jaxb-xjc\4.0.3\jaxb-xjc-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\xsom\4.0.3\xsom-4.0.3.jar;C:\Users\youngho\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\youngho\.m2\repository\com\sun\istack\istack-commons-tools\4.1.2\istack-commons-tools-4.1.2.jar;C:\Users\youngho\.m2\repository\com\sun\xml\bind\external\relaxng-datatype\4.0.3\relaxng-datatype-4.0.3.jar;C:\Users\youngho\.m2\repository\com\sun\xml\bind\external\rngom\4.0.3\rngom-4.0.3.jar;C:\Users\youngho\.m2\repository\io\rest-assured\rest-assured\5.4.0\rest-assured-5.4.0.jar;C:\Users\youngho\.m2\repository\org\apache\groovy\groovy\4.0.16\groovy-4.0.16.jar;C:\Users\youngho\.m2\repository\org\apache\groovy\groovy-xml\4.0.16\groovy-xml-4.0.16.jar;C:\Users\youngho\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\youngho\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\youngho\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\youngho\.m2\repository\io\rest-assured\json-path\5.4.0\json-path-5.4.0.jar;C:\Users\youngho\.m2\repository\org\apache\groovy\groovy-json\4.0.16\groovy-json-4.0.16.jar;C:\Users\youngho\.m2\repository\io\rest-assured\rest-assured-common\5.4.0\rest-assured-common-5.4.0.jar;C:\Users\youngho\.m2\repository\io\rest-assured\xml-path\5.4.0\xml-path-5.4.0.jar;C:\Users\youngho\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\youngho\.m2\repository\org\slf4j\slf4j-reload4j\2.0.6\slf4j-reload4j-2.0.6.jar;C:\Users\youngho\.m2\repository\ch\qos\reload4j\reload4j\1.2.22\reload4j-1.2.22.jar;"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="Asia/Seoul"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.boot.library.path" value="C:\Users\youngho\.jdks\corretto-17.0.8.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\youngho\AppData\Local\Temp\surefire2377783614169192062\surefirebooter-20240311162410689_3.jar C:\Users\youngho\AppData\Local\Temp\surefire2377783614169192062 2024-03-11T16-24-10_403-jvmRun1 surefire-20240311162410689_1tmp surefire_0-20240311162410689_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\youngho\IdeaProjects\keycloak-extensions-demo\rest-endpoint\target\test-classes;C:\Users\youngho\IdeaProjects\keycloak-extensions-demo\rest-endpoint\target\classes;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-core\24.0.0\keycloak-core-24.0.0.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-common\24.0.0\keycloak-common-24.0.0.jar;C:\Users\youngho\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.16.1\jackson-core-2.16.1.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.16.1\jackson-databind-2.16.1.jar;C:\Users\youngho\.m2\repository\org\eclipse\microprofile\openapi\microprofile-openapi-api\3.1.1\microprofile-openapi-api-3.1.1.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-server-spi\24.0.0\keycloak-server-spi-24.0.0.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-server-spi-private\24.0.0\keycloak-server-spi-private-24.0.0.jar;C:\Users\youngho\.m2\repository\org\apache\httpcomponents\httpclient\4.5.14\httpclient-4.5.14.jar;C:\Users\youngho\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\youngho\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\youngho\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-services\24.0.0\keycloak-services-24.0.0.jar;C:\Users\youngho\.m2\repository\jakarta\mail\jakarta.mail-api\2.1.1\jakarta.mail-api-2.1.1.jar;C:\Users\youngho\.m2\repository\org\eclipse\angus\angus-mail\2.0.1\angus-mail-2.0.1.jar;C:\Users\youngho\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\youngho\.m2\repository\org\twitter4j\twitter4j-core\4.1.2\twitter4j-core-4.1.2.jar;C:\Users\youngho\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\youngho\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.1.0\jakarta.ws.rs-api-3.1.0.jar;C:\Users\youngho\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\youngho\.m2\repository\jakarta\xml\soap\jakarta.xml.soap-api\3.0.0\jakarta.xml.soap-api-3.0.0.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-core-spi\6.2.7.Final\resteasy-core-spi-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\youngho\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.1\jakarta.xml.bind-api-3.0.1.jar;C:\Users\youngho\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\youngho\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\youngho\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20220608.1\owasp-java-html-sanitizer-20220608.1.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.16.1\jackson-annotations-2.16.1.jar;C:\Users\youngho\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.16.1\jackson-datatype-jdk8-2.16.1.jar;C:\Users\youngho\.m2\repository\com\google\zxing\javase\3.4.0\javase-3.4.0.jar;C:\Users\youngho\.m2\repository\com\google\zxing\core\3.4.0\core-3.4.0.jar;C:\Users\youngho\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.4.0\jai-imageio-core-1.4.0.jar;C:\Users\youngho\.m2\repository\com\webauthn4j\webauthn4j-core\0.21.5.RELEASE\webauthn4j-core-0.21.5.RELEASE.jar;C:\Users\youngho\.m2\repository\com\webauthn4j\webauthn4j-util\0.21.5.RELEASE\webauthn4j-util-0.21.5.RELEASE.jar;C:\Users\youngho\.m2\repository\org\apache\kerby\kerby-asn1\2.0.3\kerby-asn1-2.0.3.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-cbor\2.15.2\jackson-dataformat-cbor-2.15.2.jar;C:\Users\youngho\.m2\repository\org\checkerframework\checker-qual\3.36.0\checker-qual-3.36.0.jar;C:\Users\youngho\.m2\repository\com\github\ua-parser\uap-java\1.5.4\uap-java-1.5.4.jar;C:\Users\youngho\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\youngho\.m2\repository\io\smallrye\common\smallrye-common-annotation\2.1.2\smallrye-common-annotation-2.1.2.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-model-storage-private\24.0.0\keycloak-model-storage-private-24.0.0.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-model-storage\24.0.0\keycloak-model-storage-24.0.0.jar;C:\Users\youngho\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\youngho\.m2\repository\com\google\auto\service\auto-service\1.1.1\auto-service-1.1.1.jar;C:\Users\youngho\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\youngho\.m2\repository\com\google\auto\auto-common\1.2.1\auto-common-1.2.1.jar;C:\Users\youngho\.m2\repository\com\google\guava\guava\32.0.1-jre\guava-32.0.1-jre.jar;C:\Users\youngho\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\youngho\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\youngho\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\youngho\.m2\repository\com\google\errorprone\error_prone_annotations\2.18.0\error_prone_annotations-2.18.0.jar;C:\Users\youngho\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\youngho\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\youngho\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\youngho\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\youngho\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\youngho\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\youngho\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\youngho\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\youngho\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\youngho\.m2\repository\org\testcontainers\junit-jupiter\1.19.6\junit-jupiter-1.19.6.jar;C:\Users\youngho\.m2\repository\org\testcontainers\testcontainers\1.19.6\testcontainers-1.19.6.jar;C:\Users\youngho\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\youngho\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\youngho\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\youngho\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\youngho\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\youngho\.m2\repository\com\github\docker-java\docker-java-api\3.3.5\docker-java-api-3.3.5.jar;C:\Users\youngho\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.5\docker-java-transport-zerodep-3.3.5.jar;C:\Users\youngho\.m2\repository\com\github\docker-java\docker-java-transport\3.3.5\docker-java-transport-3.3.5.jar;C:\Users\youngho\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\youngho\.m2\repository\com\github\dasniko\testcontainers-keycloak\3.3.0\testcontainers-keycloak-3.3.0.jar;C:\Users\youngho\.m2\repository\io\quarkus\quarkus-junit4-mock\3.8.1\quarkus-junit4-mock-3.8.1.jar;C:\Users\youngho\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-api\1.2.6\shrinkwrap-api-1.2.6.jar;C:\Users\youngho\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-impl-base\1.2.6\shrinkwrap-impl-base-1.2.6.jar;C:\Users\youngho\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-spi\1.2.6\shrinkwrap-spi-1.2.6.jar;C:\Users\youngho\.m2\repository\org\slf4j\slf4j-api\2.0.6\slf4j-api-2.0.6.jar;C:\Users\youngho\.m2\repository\org\keycloak\keycloak-admin-client\24.0.0\keycloak-admin-client-24.0.0.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-client\6.2.7.Final\resteasy-client-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-client-api\6.2.7.Final\resteasy-client-api-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-core\6.2.7.Final\resteasy-core-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\org\jboss\jandex\2.4.4.Final\jandex-2.4.4.Final.jar;C:\Users\youngho\.m2\repository\com\ibm\async\asyncutil\0.1.0\asyncutil-0.1.0.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-multipart-provider\6.2.7.Final\resteasy-multipart-provider-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\org\apache\james\apache-mime4j-dom\0.8.9\apache-mime4j-dom-0.8.9.jar;C:\Users\youngho\.m2\repository\org\apache\james\apache-mime4j-core\0.8.9\apache-mime4j-core-0.8.9.jar;C:\Users\youngho\.m2\repository\org\apache\james\apache-mime4j-storage\0.8.9\apache-mime4j-storage-0.8.9.jar;C:\Users\youngho\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-jackson2-provider\6.2.7.Final\resteasy-jackson2-provider-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\jakarta\rs\jackson-jakarta-rs-base\2.15.3\jackson-jakarta-rs-base-2.15.3.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\jakarta\rs\jackson-jakarta-rs-json-provider\2.15.3\jackson-jakarta-rs-json-provider-2.15.3.jar;C:\Users\youngho\.m2\repository\com\fasterxml\jackson\module\jackson-module-jakarta-xmlbind-annotations\2.15.3\jackson-module-jakarta-xmlbind-annotations-2.15.3.jar;C:\Users\youngho\.m2\repository\com\github\java-json-tools\json-patch\1.13\json-patch-1.13.jar;C:\Users\youngho\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\youngho\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\youngho\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\youngho\.m2\repository\org\jboss\resteasy\resteasy-jaxb-provider\6.2.7.Final\resteasy-jaxb-provider-6.2.7.Final.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\codemodel\4.0.3\codemodel-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.3\jaxb-core-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\jaxb-jxc\4.0.3\jaxb-jxc-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.3\jaxb-runtime-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\txw2\4.0.3\txw2-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\jaxb-xjc\4.0.3\jaxb-xjc-4.0.3.jar;C:\Users\youngho\.m2\repository\org\glassfish\jaxb\xsom\4.0.3\xsom-4.0.3.jar;C:\Users\youngho\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\youngho\.m2\repository\com\sun\istack\istack-commons-tools\4.1.2\istack-commons-tools-4.1.2.jar;C:\Users\youngho\.m2\repository\com\sun\xml\bind\external\relaxng-datatype\4.0.3\relaxng-datatype-4.0.3.jar;C:\Users\youngho\.m2\repository\com\sun\xml\bind\external\rngom\4.0.3\rngom-4.0.3.jar;C:\Users\youngho\.m2\repository\io\rest-assured\rest-assured\5.4.0\rest-assured-5.4.0.jar;C:\Users\youngho\.m2\repository\org\apache\groovy\groovy\4.0.16\groovy-4.0.16.jar;C:\Users\youngho\.m2\repository\org\apache\groovy\groovy-xml\4.0.16\groovy-xml-4.0.16.jar;C:\Users\youngho\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\youngho\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\youngho\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\youngho\.m2\repository\io\rest-assured\json-path\5.4.0\json-path-5.4.0.jar;C:\Users\youngho\.m2\repository\org\apache\groovy\groovy-json\4.0.16\groovy-json-4.0.16.jar;C:\Users\youngho\.m2\repository\io\rest-assured\rest-assured-common\5.4.0\rest-assured-common-5.4.0.jar;C:\Users\youngho\.m2\repository\io\rest-assured\xml-path\5.4.0\xml-path-5.4.0.jar;C:\Users\youngho\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\youngho\.m2\repository\org\slf4j\slf4j-reload4j\2.0.6\slf4j-reload4j-2.0.6.jar;C:\Users\youngho\.m2\repository\ch\qos\reload4j\reload4j\1.2.22\reload4j-1.2.22.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\youngho"/>
+    <property name="user.language" value="ko"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-08-22"/>
+    <property name="java.home" value="C:\Users\youngho\.jdks\corretto-17.0.8.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\youngho\IdeaProjects\keycloak-extensions-demo\rest-endpoint"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\youngho\AppData\Local\Temp\surefire2377783614169192062\surefirebooter-20240311162410689_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.8.1+8-LTS"/>
+    <property name="user.name" value="youngho"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="MS949"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-17.0.8.8.1"/>
+    <property name="localRepository" value="C:\Users\youngho\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-17/issues/"/>
+    <property name="java.io.tmpdir" value="C:\Users\youngho\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2021.2.4"/>
+    <property name="java.version" value="17.0.8.1"/>
+    <property name="user.dir" value="C:\Users\youngho\IdeaProjects\keycloak-extensions-demo\rest-endpoint"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="MS949"/>
+    <property name="java.library.path" value="C:\Users\youngho\.jdks\corretto-17.0.8.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\youngho\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\youngho\AppData\Local\Android\Sdk\tools;C:\Users\youngho\Downloads\flutter_windows_3.10.5-stable\flutter\bin;C:\Users\youngho\Downloads\terraform_1.6.5_windows_386;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.332-1\bin;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.332-1\jre\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Users\youngho\AppData\Local\Microsoft\WindowsApps;C:\Users\youngho\AppData\Roaming\npm;C:\Users\youngho\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\youngho\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="17.0.8.1+8-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="" classname="dasniko.keycloak.resource.admin.MyAdminRealmResourceProviderTest" time="122.9">
+    <error message="Container startup failed for image quay.io/keycloak/keycloak:24.0" type="org.testcontainers.containers.ContainerLaunchException"><![CDATA[org.testcontainers.containers.ContainerLaunchException: Container startup failed for image quay.io/keycloak/keycloak:24.0
+	at org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:359)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:330)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension$StoreAdapter.start(TestcontainersExtension.java:280)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension$StoreAdapter.access$200(TestcontainersExtension.java:267)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$null$4(TestcontainersExtension.java:82)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$startContainers$5(TestcontainersExtension.java:82)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.startContainers(TestcontainersExtension.java:82)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.beforeAll(TestcontainersExtension.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.rnorth.ducttape.RetryCountExceededException: Retry limit hit with exception
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:88)
+	at org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:344)
+	... 9 more
+Caused by: org.testcontainers.containers.ContainerLaunchException: Could not create/start container
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:563)
+	at org.testcontainers.containers.GenericContainer.lambda$doStart$0(GenericContainer.java:354)
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:81)
+	... 10 more
+Caused by: java.lang.IllegalStateException: Wait strategy failed. Container exited with code 1
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:533)
+	... 12 more
+Caused by: org.testcontainers.containers.ContainerLaunchException: Timed out waiting for URL to be accessible (http://localhost:54308 should return HTTP 200)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.waitUntilReady(HttpWaitStrategy.java:320)
+	at org.testcontainers.containers.wait.strategy.AbstractWaitStrategy.waitUntilReady(AbstractWaitStrategy.java:52)
+	at org.testcontainers.containers.GenericContainer.waitUntilContainerStarted(GenericContainer.java:909)
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:500)
+	... 12 more
+Caused by: org.rnorth.ducttape.TimeoutException: Timeout waiting for result with exception
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:54)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.waitUntilReady(HttpWaitStrategy.java:252)
+	... 15 more
+Caused by: java.lang.RuntimeException: java.net.ConnectException: Connection refused: connect
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.lambda$null$6(HttpWaitStrategy.java:312)
+	at org.rnorth.ducttape.ratelimits.RateLimiter.doWhenReady(RateLimiter.java:27)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.lambda$waitUntilReady$7(HttpWaitStrategy.java:257)
+	at org.rnorth.ducttape.unreliables.Unreliables.lambda$retryUntilSuccess$0(Unreliables.java:43)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/java.net.Socket.connect(Socket.java:583)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:533)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:638)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:281)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.lambda$null$6(HttpWaitStrategy.java:274)
+	... 7 more
+]]></error>
+    <system-out><![CDATA[0    [main] INFO  org.testcontainers.images.PullPolicy  - Image pull policy will be performed by: DefaultPullPolicy()
+3    [main] INFO  org.testcontainers.utility.ImageNameSubstitutor  - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+510  [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy  - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+865  [main] INFO  org.testcontainers.dockerclient.DockerClientProviderStrategy  - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+868  [main] INFO  org.testcontainers.DockerClientFactory  - Docker host IP address is localhost
+888  [main] INFO  org.testcontainers.DockerClientFactory  - Connected to docker: 
+  Server Version: 25.0.3
+  API Version: 1.44
+  Operating System: Docker Desktop
+  Total Memory: 11833 MB
+920  [main] INFO  tc.testcontainers/ryuk:0.6.0  - Creating container for image: testcontainers/ryuk:0.6.0
+1274 [main] INFO  tc.testcontainers/ryuk:0.6.0  - Container testcontainers/ryuk:0.6.0 is starting: 797dc5c6df76a15d818296f67ad97d28ba231f73301998469d0749f4736ec2b5
+1813 [main] INFO  tc.testcontainers/ryuk:0.6.0  - Container testcontainers/ryuk:0.6.0 started in PT0.8933465S
+1822 [main] INFO  org.testcontainers.utility.RyukResourceReaper  - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+1822 [main] INFO  org.testcontainers.DockerClientFactory  - Checking the system...
+1823 [main] INFO  org.testcontainers.DockerClientFactory  - ?? Docker server version should be at least 1.6.0
+1932 [main] INFO  tc.quay.io/keycloak/keycloak:24.0  - Creating container for image: quay.io/keycloak/keycloak:24.0
+2185 [main] INFO  org.testcontainers.utility.RegistryAuthLocator  - Credential helper/store (docker-credential-desktop) does not have credentials for quay.io
+2308 [main] INFO  tc.quay.io/keycloak/keycloak:24.0  - Container quay.io/keycloak/keycloak:24.0 is starting: f81c8cb28386d8c3e99d18f650c3c0095adedcbbac01743bdcbebd316c96f755
+2583 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDOUT: JAVA_OPTS_KC_HEAP already set in environment; overriding default settings with values: -XX:InitialRAMPercentage=1 -XX:MaxRAMPercentage=5
+2656 [main] INFO  org.testcontainers.containers.wait.strategy.HttpWaitStrategy  - /elastic_neumann: Waiting for 120 seconds for URL: http://localhost:54308 (where port 54308 maps to container port 8080)
+4034 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDOUT: Updating the configuration and installing your custom providers, if any. Please wait.
+9094 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDOUT: 2024-03-11 07:24:19,887 WARN  [org.key.services] (build-44) KC-SERVICES0047: my-admin-rest-resource (dasniko.keycloak.resource.admin.MyAdminRealmResourceProvider) is implementing the internal SPI admin-realm-restapi-extension. This SPI is internal and may change without notice
+9094 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDOUT: 2024-03-11 07:24:20,008 WARN  [org.key.services] (build-44) KC-SERVICES0047: my-rest-resource (dasniko.keycloak.resource.MyResourceProviderFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+10109 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: ERROR: Failed to run 'build' command.
+10110 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: ERROR: io.quarkus.builder.BuildException: Build failure: Build failed due to errors
+10110 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	[error]: Build step io.quarkus.arc.deployment.ArcProcessor#validate threw an exception: jakarta.enterprise.inject.spi.DeploymentException: Found 2 deployment problems: 
+10110 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: [1] Unsatisfied dependency for type org.keycloak.models.RealmModel and qualifiers [@Default]
+10110 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- injection target: parameter 'realm' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+10110 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+10111 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: [2] Unsatisfied dependency for type org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator and qualifiers [@Default]
+10111 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- injection target: parameter 'auth' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+10111 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+10111 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	The following classes match by type, but have been skipped during discovery:
+10111 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- org.keycloak.services.resources.admin.permissions.MgmtPermissions does not declare a valid bean constructor
+10111 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10112 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10112 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.arc.processor.BeanDeployment.processErrors(BeanDeployment.java:1516)
+10112 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:320)
+10112 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.arc.processor.BeanProcessor.initialize(BeanProcessor.java:160)
+10112 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.arc.deployment.ArcProcessor.validate(ArcProcessor.java:488)
+10112 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+10113 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+10113 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+10113 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+10113 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+10113 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+10113 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+10113 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+10114 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+10114 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at java.base/java.lang.Thread.run(Thread.java:840)
+10114 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+10114 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	Suppressed: jakarta.enterprise.inject.UnsatisfiedResolutionException: Unsatisfied dependency for type org.keycloak.models.RealmModel and qualifiers [@Default]
+10114 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- injection target: parameter 'realm' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+10114 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+10115 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.Beans.resolveInjectionPoint(Beans.java:518)
+10115 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.BeanInfo.init(BeanInfo.java:638)
+10115 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:308)
+10115 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		... 13 more
+10115 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	Suppressed: jakarta.enterprise.inject.UnsatisfiedResolutionException: Unsatisfied dependency for type org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator and qualifiers [@Default]
+10115 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- injection target: parameter 'auth' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+10115 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+10116 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	The following classes match by type, but have been skipped during discovery:
+10116 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- org.keycloak.services.resources.admin.permissions.MgmtPermissions does not declare a valid bean constructor
+10116 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10116 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10116 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.Beans.resolveInjectionPoint(Beans.java:518)
+10116 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.BeanInfo.init(BeanInfo.java:638)
+10116 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:308)
+10116 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		... 13 more
+10116 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10117 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: ERROR: Build failure: Build failed due to errors
+10117 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	[error]: Build step io.quarkus.arc.deployment.ArcProcessor#validate threw an exception: jakarta.enterprise.inject.spi.DeploymentException: Found 2 deployment problems: 
+10117 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: [1] Unsatisfied dependency for type org.keycloak.models.RealmModel and qualifiers [@Default]
+10117 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- injection target: parameter 'realm' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+10117 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+10117 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: [2] Unsatisfied dependency for type org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator and qualifiers [@Default]
+10117 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- injection target: parameter 'auth' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+10117 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+10117 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	The following classes match by type, but have been skipped during discovery:
+10118 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- org.keycloak.services.resources.admin.permissions.MgmtPermissions does not declare a valid bean constructor
+10118 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10118 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10118 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.arc.processor.BeanDeployment.processErrors(BeanDeployment.java:1516)
+10118 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:320)
+10118 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.arc.processor.BeanProcessor.initialize(BeanProcessor.java:160)
+10118 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.arc.deployment.ArcProcessor.validate(ArcProcessor.java:488)
+10118 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+10118 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+10118 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+10119 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+10119 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+10119 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+10119 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+10119 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+10119 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+10119 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at java.base/java.lang.Thread.run(Thread.java:840)
+10119 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+10119 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	Suppressed: jakarta.enterprise.inject.UnsatisfiedResolutionException: Unsatisfied dependency for type org.keycloak.models.RealmModel and qualifiers [@Default]
+10119 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- injection target: parameter 'realm' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+10120 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+10120 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.Beans.resolveInjectionPoint(Beans.java:518)
+10120 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.BeanInfo.init(BeanInfo.java:638)
+10120 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:308)
+10120 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		... 13 more
+10120 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	Suppressed: jakarta.enterprise.inject.UnsatisfiedResolutionException: Unsatisfied dependency for type org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator and qualifiers [@Default]
+10121 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- injection target: parameter 'auth' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+10121 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+10121 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	The following classes match by type, but have been skipped during discovery:
+10121 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- org.keycloak.services.resources.admin.permissions.MgmtPermissions does not declare a valid bean constructor
+10121 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10121 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10122 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.Beans.resolveInjectionPoint(Beans.java:518)
+10122 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.BeanInfo.init(BeanInfo.java:638)
+10122 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:308)
+10122 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 		... 13 more
+10122 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10122 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: ERROR: Found 2 deployment problems: 
+10122 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: [1] Unsatisfied dependency for type org.keycloak.models.RealmModel and qualifiers [@Default]
+10122 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- injection target: parameter 'realm' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+10122 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+10123 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: [2] Unsatisfied dependency for type org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator and qualifiers [@Default]
+10123 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- injection target: parameter 'auth' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+10123 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+10123 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	The following classes match by type, but have been skipped during discovery:
+10123 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 	- org.keycloak.services.resources.admin.permissions.MgmtPermissions does not declare a valid bean constructor
+10123 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10123 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: 
+10123 [docker-java-stream--859647012] INFO  tc.quay.io/keycloak/keycloak:24.0  - STDERR: For more details run the same command passing the '--verbose' option. Also you can use '--help' to see the details about the usage of the particular command.
+122681 [main] ERROR tc.quay.io/keycloak/keycloak:24.0  - Could not start container
+java.lang.IllegalStateException: Wait strategy failed. Container exited with code 1
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:533)
+	at org.testcontainers.containers.GenericContainer.lambda$doStart$0(GenericContainer.java:354)
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:81)
+	at org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:344)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:330)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension$StoreAdapter.start(TestcontainersExtension.java:280)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension$StoreAdapter.access$200(TestcontainersExtension.java:267)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$null$4(TestcontainersExtension.java:82)
+	at org.junit.platform.engine.support.store.NamespacedHierarchicalStore.lambda$getOrComputeIfAbsent$5(NamespacedHierarchicalStore.java:147)
+	at org.junit.platform.engine.support.store.NamespacedHierarchicalStore$MemoizingSupplier.computeValue(NamespacedHierarchicalStore.java:372)
+	at org.junit.platform.engine.support.store.NamespacedHierarchicalStore$MemoizingSupplier.get(NamespacedHierarchicalStore.java:361)
+	at org.junit.platform.engine.support.store.NamespacedHierarchicalStore$StoredValue.evaluate(NamespacedHierarchicalStore.java:308)
+	at org.junit.platform.engine.support.store.NamespacedHierarchicalStore$StoredValue.access$200(NamespacedHierarchicalStore.java:287)
+	at org.junit.platform.engine.support.store.NamespacedHierarchicalStore.getOrComputeIfAbsent(NamespacedHierarchicalStore.java:149)
+	at org.junit.jupiter.engine.execution.NamespaceAwareStore.lambda$getOrComputeIfAbsent$2(NamespaceAwareStore.java:57)
+	at org.junit.jupiter.engine.execution.NamespaceAwareStore.accessStore(NamespaceAwareStore.java:90)
+	at org.junit.jupiter.engine.execution.NamespaceAwareStore.getOrComputeIfAbsent(NamespaceAwareStore.java:57)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$startContainers$5(TestcontainersExtension.java:82)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.startContainers(TestcontainersExtension.java:82)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.beforeAll(TestcontainersExtension.java:56)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeBeforeAllCallbacks$12(ClassBasedTestDescriptor.java:396)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeBeforeAllCallbacks(ClassBasedTestDescriptor.java:396)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:85)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:148)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.testcontainers.containers.ContainerLaunchException: Timed out waiting for URL to be accessible (http://localhost:54308 should return HTTP 200)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.waitUntilReady(HttpWaitStrategy.java:320)
+	at org.testcontainers.containers.wait.strategy.AbstractWaitStrategy.waitUntilReady(AbstractWaitStrategy.java:52)
+	at org.testcontainers.containers.GenericContainer.waitUntilContainerStarted(GenericContainer.java:909)
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:500)
+	... 63 more
+Caused by: org.rnorth.ducttape.TimeoutException: Timeout waiting for result with exception
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:54)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.waitUntilReady(HttpWaitStrategy.java:252)
+	... 66 more
+Caused by: java.lang.RuntimeException: java.net.ConnectException: Connection refused: connect
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.lambda$null$6(HttpWaitStrategy.java:312)
+	at org.rnorth.ducttape.ratelimits.RateLimiter.doWhenReady(RateLimiter.java:27)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.lambda$waitUntilReady$7(HttpWaitStrategy.java:257)
+	at org.rnorth.ducttape.unreliables.Unreliables.lambda$retryUntilSuccess$0(Unreliables.java:43)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/java.net.Socket.connect(Socket.java:583)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:533)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:638)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:281)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.lambda$null$6(HttpWaitStrategy.java:274)
+	... 7 more
+122749 [main] ERROR tc.quay.io/keycloak/keycloak:24.0  - Log output from the failed container:
+JAVA_OPTS_KC_HEAP already set in environment; overriding default settings with values: -XX:InitialRAMPercentage=1 -XX:MaxRAMPercentage=5
+Updating the configuration and installing your custom providers, if any. Please wait.
+2024-03-11 07:24:19,887 WARN  [org.key.services] (build-44) KC-SERVICES0047: my-admin-rest-resource (dasniko.keycloak.resource.admin.MyAdminRealmResourceProvider) is implementing the internal SPI admin-realm-restapi-extension. This SPI is internal and may change without notice
+2024-03-11 07:24:20,008 WARN  [org.key.services] (build-44) KC-SERVICES0047: my-rest-resource (dasniko.keycloak.resource.MyResourceProviderFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+ERROR: Failed to run 'build' command.
+ERROR: io.quarkus.builder.BuildException: Build failure: Build failed due to errors
+	[error]: Build step io.quarkus.arc.deployment.ArcProcessor#validate threw an exception: jakarta.enterprise.inject.spi.DeploymentException: Found 2 deployment problems: 
+[1] Unsatisfied dependency for type org.keycloak.models.RealmModel and qualifiers [@Default]
+	- injection target: parameter 'realm' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+[2] Unsatisfied dependency for type org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator and qualifiers [@Default]
+	- injection target: parameter 'auth' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+	The following classes match by type, but have been skipped during discovery:
+	- org.keycloak.services.resources.admin.permissions.MgmtPermissions does not declare a valid bean constructor
+
+
+	at io.quarkus.arc.processor.BeanDeployment.processErrors(BeanDeployment.java:1516)
+	at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:320)
+	at io.quarkus.arc.processor.BeanProcessor.initialize(BeanProcessor.java:160)
+	at io.quarkus.arc.deployment.ArcProcessor.validate(ArcProcessor.java:488)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+	Suppressed: jakarta.enterprise.inject.UnsatisfiedResolutionException: Unsatisfied dependency for type org.keycloak.models.RealmModel and qualifiers [@Default]
+	- injection target: parameter 'realm' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+		at io.quarkus.arc.processor.Beans.resolveInjectionPoint(Beans.java:518)
+		at io.quarkus.arc.processor.BeanInfo.init(BeanInfo.java:638)
+		at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:308)
+		... 13 more
+	Suppressed: jakarta.enterprise.inject.UnsatisfiedResolutionException: Unsatisfied dependency for type org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator and qualifiers [@Default]
+	- injection target: parameter 'auth' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+	The following classes match by type, but have been skipped during discovery:
+	- org.keycloak.services.resources.admin.permissions.MgmtPermissions does not declare a valid bean constructor
+
+
+		at io.quarkus.arc.processor.Beans.resolveInjectionPoint(Beans.java:518)
+		at io.quarkus.arc.processor.BeanInfo.init(BeanInfo.java:638)
+		at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:308)
+		... 13 more
+
+ERROR: Build failure: Build failed due to errors
+	[error]: Build step io.quarkus.arc.deployment.ArcProcessor#validate threw an exception: jakarta.enterprise.inject.spi.DeploymentException: Found 2 deployment problems: 
+[1] Unsatisfied dependency for type org.keycloak.models.RealmModel and qualifiers [@Default]
+	- injection target: parameter 'realm' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+[2] Unsatisfied dependency for type org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator and qualifiers [@Default]
+	- injection target: parameter 'auth' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+	The following classes match by type, but have been skipped during discovery:
+	- org.keycloak.services.resources.admin.permissions.MgmtPermissions does not declare a valid bean constructor
+
+
+	at io.quarkus.arc.processor.BeanDeployment.processErrors(BeanDeployment.java:1516)
+	at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:320)
+	at io.quarkus.arc.processor.BeanProcessor.initialize(BeanProcessor.java:160)
+	at io.quarkus.arc.deployment.ArcProcessor.validate(ArcProcessor.java:488)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+	Suppressed: jakarta.enterprise.inject.UnsatisfiedResolutionException: Unsatisfied dependency for type org.keycloak.models.RealmModel and qualifiers [@Default]
+	- injection target: parameter 'realm' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+		at io.quarkus.arc.processor.Beans.resolveInjectionPoint(Beans.java:518)
+		at io.quarkus.arc.processor.BeanInfo.init(BeanInfo.java:638)
+		at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:308)
+		... 13 more
+	Suppressed: jakarta.enterprise.inject.UnsatisfiedResolutionException: Unsatisfied dependency for type org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator and qualifiers [@Default]
+	- injection target: parameter 'auth' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+	The following classes match by type, but have been skipped during discovery:
+	- org.keycloak.services.resources.admin.permissions.MgmtPermissions does not declare a valid bean constructor
+
+
+		at io.quarkus.arc.processor.Beans.resolveInjectionPoint(Beans.java:518)
+		at io.quarkus.arc.processor.BeanInfo.init(BeanInfo.java:638)
+		at io.quarkus.arc.processor.BeanDeployment.init(BeanDeployment.java:308)
+		... 13 more
+
+ERROR: Found 2 deployment problems: 
+[1] Unsatisfied dependency for type org.keycloak.models.RealmModel and qualifiers [@Default]
+	- injection target: parameter 'realm' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+[2] Unsatisfied dependency for type org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator and qualifiers [@Default]
+	- injection target: parameter 'auth' of dasniko.keycloak.resource.admin.MyAdminRealmResource constructor
+	- declared on CLASS bean [types=[dasniko.keycloak.resource.admin.MyAdminRealmResource, java.lang.Object], qualifiers=[@Default, @Any], target=dasniko.keycloak.resource.admin.MyAdminRealmResource]
+	The following classes match by type, but have been skipped during discovery:
+	- org.keycloak.services.resources.admin.permissions.MgmtPermissions does not declare a valid bean constructor
+
+
+For more details run the same command passing the '--verbose' option. Also you can use '--help' to see the details about the usage of the particular command.
+
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,11 @@
+dasniko\keycloak\resource\admin\dto\RequirActionsDto$RequirActionsDtoBuilder.class
+dasniko\keycloak\resource\admin\MyAdminRealmResource.class
+dasniko\keycloak\resource\admin\dto\RequirActionsDto.class
+META-INF\services\org.keycloak.services.resource.RealmResourceProviderFactory
+dasniko\keycloak\resource\admin\dto\OtpRequestDto.class
+META-INF\services\org.keycloak.services.resources.admin.ext.AdminRealmResourceProviderFactory
+dasniko\keycloak\resource\admin\dto\OtpResponseDto.class
+dasniko\keycloak\resource\MyResourceProvider.class
+dasniko\keycloak\resource\admin\dto\OtpResponseDto$OtpResponseDtoBuilder.class
+dasniko\keycloak\resource\admin\MyAdminRealmResourceProvider.class
+dasniko\keycloak\resource\MyResourceProviderFactory.class

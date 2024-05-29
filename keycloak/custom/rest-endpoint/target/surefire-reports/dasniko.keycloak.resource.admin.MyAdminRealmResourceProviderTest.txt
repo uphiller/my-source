@@ -1,0 +1,67 @@
+-------------------------------------------------------------------------------
+Test set: dasniko.keycloak.resource.admin.MyAdminRealmResourceProviderTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 122.9 s <<< FAILURE! -- in dasniko.keycloak.resource.admin.MyAdminRealmResourceProviderTest
+dasniko.keycloak.resource.admin.MyAdminRealmResourceProviderTest -- Time elapsed: 122.9 s <<< ERROR!
+org.testcontainers.containers.ContainerLaunchException: Container startup failed for image quay.io/keycloak/keycloak:24.0
+	at org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:359)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:330)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension$StoreAdapter.start(TestcontainersExtension.java:280)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension$StoreAdapter.access$200(TestcontainersExtension.java:267)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$null$4(TestcontainersExtension.java:82)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.lambda$startContainers$5(TestcontainersExtension.java:82)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.startContainers(TestcontainersExtension.java:82)
+	at org.testcontainers.junit.jupiter.TestcontainersExtension.beforeAll(TestcontainersExtension.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.rnorth.ducttape.RetryCountExceededException: Retry limit hit with exception
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:88)
+	at org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:344)
+	... 9 more
+Caused by: org.testcontainers.containers.ContainerLaunchException: Could not create/start container
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:563)
+	at org.testcontainers.containers.GenericContainer.lambda$doStart$0(GenericContainer.java:354)
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:81)
+	... 10 more
+Caused by: java.lang.IllegalStateException: Wait strategy failed. Container exited with code 1
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:533)
+	... 12 more
+Caused by: org.testcontainers.containers.ContainerLaunchException: Timed out waiting for URL to be accessible (http://localhost:54308 should return HTTP 200)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.waitUntilReady(HttpWaitStrategy.java:320)
+	at org.testcontainers.containers.wait.strategy.AbstractWaitStrategy.waitUntilReady(AbstractWaitStrategy.java:52)
+	at org.testcontainers.containers.GenericContainer.waitUntilContainerStarted(GenericContainer.java:909)
+	at org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:500)
+	... 12 more
+Caused by: org.rnorth.ducttape.TimeoutException: Timeout waiting for result with exception
+	at org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:54)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.waitUntilReady(HttpWaitStrategy.java:252)
+	... 15 more
+Caused by: java.lang.RuntimeException: java.net.ConnectException: Connection refused: connect
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.lambda$null$6(HttpWaitStrategy.java:312)
+	at org.rnorth.ducttape.ratelimits.RateLimiter.doWhenReady(RateLimiter.java:27)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.lambda$waitUntilReady$7(HttpWaitStrategy.java:257)
+	at org.rnorth.ducttape.unreliables.Unreliables.lambda$retryUntilSuccess$0(Unreliables.java:43)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/java.net.Socket.connect(Socket.java:583)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:533)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:638)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:281)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.testcontainers.containers.wait.strategy.HttpWaitStrategy.lambda$null$6(HttpWaitStrategy.java:274)
+	... 7 more
+
