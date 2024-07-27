@@ -10,10 +10,9 @@ services:
       - KC_DB_URL=${KC_DB_URL}
       - KC_DB_USERNAME=${KC_DB_USERNAME}
       - KC_DB_PASSWORD=${KC_DB_PASSWORD}
-      - KC_TRANSACTION_XA_ENABLED=${KC_TRANSACTION_XA_ENABLED}
-      - KC_CACHE=${KC_CACHE}
-      - KC_CACHE_STACK=${KC_CACHE_STACK}
-      - JAVA_OPTS=${JAVA_OPTS}
+      - KC_CACHE=ispn
+      - KC_CACHE_STACK=ec2
+      - JAVA_OPTS=-Djgroups.s3.region_name=ap-northeast-2 -Djgroups.s3.bucket=MY_BUCKET_NAME
       - AWS_ACCESS_KEY=${AWS_ACCESS_KEY}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
     network_mode: "host"
