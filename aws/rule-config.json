@@ -1,0 +1,20 @@
+{
+  "Priority": 1,
+  "ListenerArn": "arn:aws:elasticloadbalancing:ap-northeast-2:193945198166:listener/app/test-lb/2246be6ce80ef114/f74984a506e01e8a",
+  "Conditions": [
+    {
+      "Field": "path-pattern",
+      "Values": ["/*"]
+    }
+  ],
+  "Actions": [
+    {
+      "Type": "fixed-response",
+      "FixedResponseConfig": {
+        "ContentType": "text/html",
+        "MessageBody": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>서비스일시중단안내</title><style>body{font-family:Arial,sans-serif}object{width:100%;height:100vh}body::-webkit-scrollbar{display:none}</style></head><body><object type='text/html' th:data='/index.html'></object></body></html>",
+        "StatusCode": "200"
+      }
+    }
+  ]
+}

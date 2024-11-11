@@ -1,0 +1,18 @@
+services:
+  jeus1:
+    image: tmaxsoftofficial/jeus:8.1.105067-jdk8-openjdk
+    networks:
+      - was
+    ports:
+      - 8080:8080
+      - 9736:9736
+#  jeus2:
+#    image: jeus:custom
+#    networks:
+#      - was
+#    ports:
+#      - 8080:8080
+#      - 9736:9736
+networks:
+  was:
+    driver: bridge

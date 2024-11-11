@@ -1,0 +1,25 @@
+services:
+  controller:
+    image: ngrinder/controller
+    restart: always
+    ports:
+      - "80:80"
+      - "16001:16001"
+      - "12000-12009:12000-12009"
+    volumes:
+      - ./ngrinder-controller:/opt/ngrinder-controller
+  agent1:
+    image: ngrinder/agent
+    restart: always
+    links:
+      - controller
+  agent2:
+    image: ngrinder/agent
+    restart: always
+    links:
+      - controller
+  agent3:
+    image: ngrinder/agent
+    restart: always
+    links:
+      - controller

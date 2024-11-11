@@ -1,0 +1,78 @@
+# 1. 베이스 이미지 선택 (Ubuntu 사용)
+FROM node:14
+
+# 2. 필요한 기본 패키지 설치 (타임존을 비상호작용 모드로 설정)
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y \
+    tzdata \
+    build-essential \
+    curl \
+    git \
+    libtool \
+    autoconf \
+    python-dev \
+    libpython3-dev \
+    pkg-config \
+    librrd-dev \
+    && ln -fs /usr/share/zoneinfo/Asia/Seoul /etc/localtime \
+    && dpkg-reconfigure --frontend noninteractive tzdata
+
+# 3. 작업 디렉토리 설정
+WORKDIR /root
+
+# 4. Node.js 설치
+RUN mkdir vendor \
+    && curl -OL http://nodejs.org/dist/v0.10.28/node-v0.10.28-linux-x64.tar.gz \
+    && tar xvf node-v0.10.28-linux-x64.tar.gz \
+    && ln -s node-v0.10.28-linux-x64 vendor/node
+
+# 5. Node.js 환경 변수 설정
+ENV NODE_HOME=/root/vendor/node
+ENV PATH=$NODE_HOME/bin:$PATH
+
+## 6. rrdtool 설치
+#WORKDIR /root/vendor
+#RUN curl -OL https://github.com/oetiker/rrdtool-1.x/releases/download/v1.9.0/rrdtool-1.9.0.tar.gz \
+#    && tar xvf rrdtool-1.9.0.tar.gz \
+#    && cd rrdtool-1.9.0 \
+#    && ./configure --prefix=/root/arcus-collectd \
+#    && make && make install
+#
+## 7. collectd 설치
+#RUN curl -OL https://collectd.org/files/collectd-5.4.1.tar.gz \
+#    && tar xvf collectd-5.4.1.tar.gz \
+#    && cd collectd-5.4.1 \
+#    && ./configure --prefix=/root/arcus-collectd --enable-python --enable-rrdtool --with-librrd=/root/arcus-collectd \
+#    && make && make install
+#
+## 8. arcus-collectd 환경 변수 설정
+#ENV PATH="/root/arcus-collectd/bin:$PATH"
+
+# 9. Arcus Hubble 클론
+WORKDIR /root
+RUN git clone http://github.com/naver/arcus-hubble
+
+# 10. 환경 변수 설정을 위한 env.sh 생성 및 수정
+WORKDIR /root/arcus-hubble
+
+RUN echo "#!/bin/bash" > env.sh \
+    && echo "export COLLECTD_HOME=/root/arcus-collectd" >> env.sh \
+    && echo "export HUBBLE_HOME=/root/arcus-hubble" >> env.sh \
+    && echo "export COLLECTD_RRD_DATADIR=/root/hubble_data" >> env.sh \
+    && echo "export HUBBLE_ZOOKEEPER_HOSTS=\"localhost:2181,localhost:2182,localhost:2183,localhost:2184,localhost:2185\"" >> env.sh \
+    && chmod +x env.sh
+
+# 11. 필요한 데이터 디렉토리 생성
+#RUN mkdir -p /root/hubble_data
+
+# 12. setup.sh 실행
+
+#RUN ./setup.sh
+
+RUN npm install -g forever
+#RUN npm install
+
+# 13. 8080 포트 노출
+EXPOSE 8080
+
+CMD ["/root/arcus-hubble/start.sh"]

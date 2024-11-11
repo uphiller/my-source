@@ -1,0 +1,2 @@
+aws elbv2 create-rule --cli-input-json fileb://rule-config.json
+aws elbv2 delete-rule --rule-arn arn:aws:elasticloadbalancing:ap-northeast-2:193945198166:listener-rule/app/test-lb/2246be6ce80ef114/f74984a506e01e8a/26d29eb9e0fa9c7c

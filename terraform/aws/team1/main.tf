@@ -9,7 +9,6 @@ terraform {
 
 provider "aws" {
   region = "ap-northeast-2"
-  profile = "inswave01"
 }
 
 module "global" {
